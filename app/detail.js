@@ -12,9 +12,8 @@ export default function DetailScreen() {
 
   const [isBookmarked, setIsBookmarked] = useState(false);
 
-  // --- 動態星數渲染函數 (加入安全判定) ---
+ 
   const renderStars = (ratingStr) => {
-    // 預防有些資料沒給星數，預設給 4.0
     const displayString = ratingStr || '4.0 / 5.0';
     const numericRating = parseFloat(displayString);
     const stars = [];
